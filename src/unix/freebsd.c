@@ -221,7 +221,8 @@ int uv_cpu_info(uv_cpu_info_t** cpu_infos, int* count) {
   cptimes_key = "kern.cp_times";
 #endif
 
-#if defined(__arm__) || defined(__aarch64__)
+#if defined(__arm__) || defined(__aarch64__) || defined(__gptx__)
+
   /* The key hw.model and hw.clockrate are not available on FreeBSD ARM. */
   model_key = "hw.machine";
   cpuspeed = 0;

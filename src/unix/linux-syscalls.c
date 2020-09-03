@@ -99,7 +99,8 @@
 #  define __NR_statx 332
 # elif defined(__i386__)
 #  define __NR_statx 383
-# elif defined(__aarch64__)
+# elif defined(__aarch64__) || defined(__gptx__)
+
 #  define __NR_statx 397
 # elif defined(__arm__)
 #  define __NR_statx (UV_SYSCALL_BASE + 397)
@@ -115,7 +116,8 @@
 #  define __NR_getrandom 318
 # elif defined(__i386__)
 #  define __NR_getrandom 355
-# elif defined(__aarch64__)
+# elif defined(__aarch64__) || defined(__gptx__)
+
 #  define __NR_getrandom 384
 # elif defined(__arm__)
 #  define __NR_getrandom (UV_SYSCALL_BASE + 384)
